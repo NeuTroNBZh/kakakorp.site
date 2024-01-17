@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <title>KAKAKORP Esports. Rejoignez dès maintenant l'équipe !</title>
+    <link
+      href="image/KaKaKorp-transparent.ico"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
+    <link href="image/KaKaKorp-transparent.ico" rel="icon" />
+    <meta charset="utf-8" />
+    <link href="combined_style.css" rel="stylesheet" />
+    <link href="Formulaire.css" rel="stylesheet" />
+    <style>
+      /* BEGIN: Added border styles */
+
+      input[type="email"],
+      input[type="text"],
+      textarea {
+        border: 1px solid black;
+        padding: 5px;
+        overflow: hidden;
+      }
+      /* END: Added border styles */
+
+      /* BEGIN: Added hover style for submit button */
+      input[type="submit"]:hover {
+        background-color: #555;
+        color: white;
+      }
+      /* END: Added hover style for submit button */
+    </style>
+    <meta
+      content="KAKAKORP Esports, une équipe eSport dynamique et talentueuse, fondée en 2023, se distingue par son sens de l'humour unique et ses compétences exceptionnelles dans des jeux comme Valorant et Counter Strike."
+      name="description"
+    />
+    <meta
+      content="KAKAKORP, eSports, Valorant, Counter Strike, eSport français, équipe gaming, jeux compétitifs, talent eSport, humour , NeuTroNBZh, équipe eSport française, équipe eSport Valorant, équipe eSport Counter Strike, eSport Bretagne , eSport Brest, eSport Rennes, eSport Isen, Brest, Rennes, Bretagne, Isen, Isen Brest, esport isen brest "
+      name="keywords"
+    />
+    <meta
+      content="KAKAKORP Esports - Équipe eSport Dynamique et Talentueuse"
+      property="og:title"
+    />
+    <meta content="website" property="og:type" />
+    <meta content="https://kakakorp.site" property="og:url" />
+    <meta content="image/KaKaKorp-transparent.png" property="og:image" />
+    <meta
+      content="Découvrez KAKAKORP Esports, une équipe eSport fondée en 2023, connue pour son talent exceptionnel et son esprit d'équipe unique dans des jeux compétitifs comme Valorant et Counter Strike."
+      property="og:description"
+    />
+    <meta content="KAKAKORP Esports" property="og:site_name" />
+    <meta content="fr_FR" property="og:locale" />
+    <meta content="en_US" property="og:locale:alternate" />
+    <meta content="summary_large_image" name="twitter:card" />
+    <meta
+      content="KAKAKORP Esports - Équipe eSport Dynamique et Talentueuse"
+      name="twitter:title"
+    />
+    <meta content="@KAKAKORP" name="twitter:site" />
+    <meta
+      content="Découvrez KAKAKORP Esports, une équipe eSport fondée en 2023, connue pour son talent exceptionnel et son esprit d'équipe unique dans des jeux compétitifs comme Valorant et Counter Strike."
+      name="twitter:description"
+    />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="index, follow" name="robots" />
+    <meta content="index, follow" name="googlebot" />
+    <meta content="index, follow" name="bingbot" />
+    <meta content="Your Name" name="author" />
+    <meta content="7 days" name="revisit-after" />
+    <meta content="global" name="distribution" />
+    <meta content="general" name="rating" />
+    <meta content="French" name="language" />
+    <meta content="FR" name="geo.region" />
+    <meta content="Paris" name="geo.placename" />
+    <meta content="48.8566; 2.3522" name="geo.position" />
+    <meta content="48.8566, 2.3522" name="ICBM" />
+  </head>
+  <body>
+    <header>
+      <div class="header-logo">
+        <a href="index.html">
+          <img
+            alt="Logo de KAKAKORP Esports"
+            height="200"
+            loading="lazy"
+            src="image/KaKaKorp-t_5.gif"
+            width="300"
+          />
+        </a>
+      </div>
+      <button aria-label="toggle navigation" class="nav-toggle">Menu</button>
+      <script>
+        document
+          .querySelector(".nav-toggle")
+          .addEventListener("click", function () {
+            document.querySelector(".header-nav").classList.toggle("active");
+          });
+      </script>
+      <nav class="header-nav">
+        <ul class="center">
+          <li>
+            <button>
+              <a class="btn2" href="index.html"
+                ><span class="spn2">ACCUEIL</span></a
+              >
+            </button>
+          </li>
+          <li>
+            <button>
+              <a
+                class="btn2"
+                href="https://discord.gg/bCvuRqeyrV"
+                target="_blank"
+                ><span class="spn2">DISCORD</span></a
+              >
+            </button>
+          </li>
+          <li>
+            <button>
+              <a class="btn2" href="Contact.html"
+                ><span class="spn2">CONTACT</span></a
+              >
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-social">
+        <!-- Insert social media icons here -->
+      </div>
+    </header>
+    <main>
+      <div class="form-wrapper">
+        <div class="fond">
+          <h1>Formulaire de recrutement</h1>
+          <p>
+            Vous souhaitez rejoindre l'équipe ? Remplissez le formulaire
+            ci-dessous et nous vous recontacterons dans les plus brefs délais.
+          </p>
+        </div>
+        <section class="Apropo">
+          <form action="process_form.php" method="POST">
+            <label for="email">Adresse e-mail :</label>
+            <div class="textInputWrapper">
+              <input
+                placeholder="monadressemail@kakakorp.site"
+                type="text"
+                class="textInput"
+                id="email"
+                name="email"
+              />
+            </div>
+
+            <label for="pseudo">Pseudo :</label>
+            <div class="textInputWrapper">
+              <input
+                placeholder="MonPseudo"
+                type="text"
+                class="textInput"
+                id="pseudo"
+                name="pseudo"
+              />
+            </div>
+
+            <label for="jeu">Vos Jeux :</label>
+            <div class="textInputWrapper">
+              <input
+                placeholder="Valorant"
+                type="text"
+                class="textInput"
+                id="jeu"
+                name="jeu"
+              />
+            </div>
+
+            <label for="rank">Vos Rank :</label>
+            <div class="textInputWrapper">
+              <input
+                placeholder="Radian"
+                type="text"
+                class="textInput"
+                id="rang"
+                name="rang"
+              />
+            </div>
+            <br />
+
+            <label for="photo">Photo de profil :</label><br />
+            <label for="file" class="custum-file-upload">
+              <div class="icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill=""
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z"
+                      fill=""
+                    ></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="text">
+                <span>Click ici pour mettre ton image</span>
+              </div>
+              <input id="file" type="file" /> </label
+            ><br /><br />
+
+            <label for="commentaire">Commentaire :</label><br />
+            <textarea
+              id="commentaire"
+              name="commentaire"
+              rows="4"
+              cols="50"
+            ></textarea
+            ><br /><br />
+
+            <button class="ui-btn" type="submit">Envoyer</button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer>
+        <a href="mailto:contact@kakakorp.site">Contact : contact@kakakorp.site</a>
+        <p>KAKAKORP ® - 2023</p>
+      </footer>
+  </body>
+</html>
