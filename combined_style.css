@@ -1,5 +1,3 @@
-
-
 /* Reset CSS */
 /***
     The new CSS reset - version 1.11.2 (last updated 15.11.2023)
@@ -11,109 +9,116 @@
     - The "symbol *" part is to solve Firefox SVG sprite bug
     - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
  */
- *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
-    all: unset;
-    display: revert;
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
 }
 
 /* Preferred box-sizing value */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Fix mobile Safari increase font-size on landscape mode */
 html {
-    -moz-text-size-adjust: none;
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
 
 /* Reapply the pointer cursor for anchor tags */
-a, button {
-    cursor: revert;
+a,
+button {
+  cursor: revert;
 }
 
 /* Remove list styles (bullets/numbers) */
-ol, ul, menu, summary {
-    list-style: none;
+ol,
+ul,
+menu,
+summary {
+  list-style: none;
 }
 
 /* For images to not be able to exceed their container */
 img {
-    max-inline-size: 100%;
-    max-block-size: 100%;
-    width: 100px;
-    height: 100px;
+  max-inline-size: 100%;
+  max-block-size: 100%;
+  width: 100px;
+  height: 100px;
 }
 
 /* removes spacing between cells in tables */
 table {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 /* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
-input, textarea {
-    -webkit-user-select: auto;
-    user-select: auto;
+input,
+textarea {
+  -webkit-user-select: auto;
+  user-select: auto;
 }
 
 /* revert the 'white-space' property for textarea elements on Safari */
 textarea {
-    white-space: revert;
+  white-space: revert;
 }
 
 /* minimum style to allow to style meter element */
 meter {
-    -webkit-appearance: revert;
-    appearance: revert;
+  -webkit-appearance: revert;
+  appearance: revert;
 }
 
 /* preformatted text - use only for this feature */
 :where(pre) {
-    all: revert;
-    box-sizing: border-box;
+  all: revert;
+  box-sizing: border-box;
 }
 
 /* reset default text opacity of input placeholder */
 ::placeholder {
-    color: unset;
+  color: unset;
 }
 
 /* fix the feature of 'hidden' attribute.
    display:revert; revert to element instead of attribute */
 :where([hidden]) {
-    display: none;
+  display: none;
 }
 
 /* revert for bug in Chromium browsers
    - fix for the content editable attribute will work properly.
    - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
 :where([contenteditable]:not([contenteditable="false"])) {
-    -moz-user-modify: read-write;
-    -webkit-user-modify: read-write;
-    overflow-wrap: break-word;
-    -webkit-line-break: after-white-space;
-    line-break: after-white-space;
-    -webkit-user-select: auto;
-    user-select: auto;
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  line-break: after-white-space;
+  -webkit-user-select: auto;
+  user-select: auto;
 }
 
 /* apply back the draggable feature - exist only in Chromium and Safari */
 :where([draggable="true"]) {
-    -webkit-user-drag: element;
+  -webkit-user-drag: element;
 }
 
 /* Revert Modal native behavior */
 :where(dialog:modal) {
-    all: revert;
-    box-sizing: border-box;
+  all: revert;
+  box-sizing: border-box;
 }
 
 /* Remove details summary webkit styles */
 ::-webkit-details-marker {
-    display: none;
+  display: none;
 }
 
 /* Style CSS */
@@ -156,7 +161,9 @@ header {
   z-index: 1;
 }
 
-.header-logo, .header-logo img, .header-logo video {
+.header-logo,
+.header-logo img,
+.header-logo video {
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
@@ -169,7 +176,8 @@ header {
   height: auto;
 }
 
-.header-nav, nav {
+.header-nav,
+nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,7 +185,8 @@ header {
   width: 100%;
 }
 
-.header-nav ul, nav ul {
+.header-nav ul,
+nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
@@ -195,7 +204,8 @@ article {
   margin-bottom: 20px;
 }
 
-button.more, button.more::after {
+button.more,
+button.more::after {
   padding: 16px 20px;
   font-size: 18px;
   background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
@@ -253,23 +263,28 @@ button.more:hover::after {
 }
 
 @media (max-width: 600px) {
-  .container, .Apropo {
+  .container,
+  .Apropo {
     width: 100%;
     overflow: visible;
   }
 
-  .header-logo, .header-logo video, .header-logo img {
+  .header-logo,
+  .header-logo video,
+  .header-logo img {
     font-size: 16px;
     max-width: 60px;
     max-height: 60px;
   }
 
-  .header-nav ul, nav ul li {
+  .header-nav ul,
+  nav ul li {
     gap: 10px;
     margin-right: 5px;
   }
 
-  button.more, button.more::after {
+  button.more,
+  button.more::after {
     padding: 10px 14px;
     font-size: 14px;
   }
@@ -316,9 +331,8 @@ button.more:hover::after {
   }
 }
 
-
 /* Stylea CSS */
-h1{
+h1 {
   font-weight: bold;
   font-size: 2.5em;
   text-align: center;
@@ -327,7 +341,7 @@ h1{
   margin-bottom: 20px; /* Add margin bottom */
 }
 
-h2{
+h2 {
   font-weight: bold;
   font-size: 1.5em;
   padding-top: 20px;
@@ -353,7 +367,6 @@ h2{
   padding-left: 2px;
 }
 
-
 .Apropo p {
   font-size: 1.2em;
   font-weight: 400;
@@ -372,7 +385,6 @@ h2{
   margin-bottom: 20px; /* Add margin bottom */
   padding-left: 20px;
 }
-
 
 section {
   padding: 20px;
@@ -400,7 +412,6 @@ footer p {
   flex: 1; /* Update: Add flex property to prioritize <p> elements */
   text-align: center;
   font-weight: bold;
-  
 }
 
 footer a {
@@ -416,7 +427,7 @@ footer a:hover {
 
 .card2 {
   height: 50%;
-  background: #E8EAEA;
+  background: #e8eaea;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -432,7 +443,7 @@ footer a:hover {
 .card3 {
   width: fit-content;
   height: fit-content;
-  background: #E8EAEA;
+  background: #e8eaea;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -444,7 +455,8 @@ footer a:hover {
   margin-top: 4%;
 }
 
-.title2, .more2 {
+.title2,
+.more2 {
   padding: 10px 15px;
 }
 
@@ -478,7 +490,7 @@ footer a:hover {
 }
 
 .username2 {
-  font-size: .9em;
+  font-size: 0.9em;
   color: #64696e;
 }
 
@@ -496,22 +508,22 @@ footer a:hover {
 
 .image2 {
   background-image: url("image/KaKaKorp.png");
-    width: 60px;
+  width: 60px;
 }
 
 .image3 {
   background-image: url("image/KaKaKorpNeuTroNBZh.png");
-    width: 60px;
+  width: 60px;
 }
 
 .image4 {
   background-image: url("image/OYRSPh4b_400x400.jpg");
-    width: 60px;
+  width: 60px;
 }
 
 .image5 {
   background-image: url("image/nlzkiZf8_400x400.jpg");
-    width: 60px;
+  width: 60px;
 }
 
 .image6 {
@@ -600,7 +612,6 @@ footer a:hover {
   }
 }
 /* END: Mobile Optimizations */
-
 
 /* Stylef CSS */
 .btn2 {
@@ -901,7 +912,7 @@ button {
 .player-image {
   width: 100%;
   display: block;
-    height: 100px;
+  height: 100px;
 }
 
 .player-name {
@@ -951,7 +962,6 @@ button {
     padding: 5px 0;
   }
 }
-
 
 /* Stylej CSS */
 .frontSide1,
@@ -1011,7 +1021,7 @@ button {
 }
 .frontSide2,
 .frontSide2::before {
-  background-image: url("");
+  background-image: url("image/Nexo.png");
   background-size: cover;
   background-position: center;
 }
