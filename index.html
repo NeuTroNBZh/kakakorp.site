@@ -61,55 +61,30 @@
     <header>
       <div class="header-logo">
         <a href="index.html">
-          <img
-            alt="Logo de KAKAKORP Esports"
-            height="200"
-            loading="lazy"
-            src="image/KaKaKorp-t_5.gif"
-            width="300"
-          />
+          <img alt="Logo de KAKAKORP Esports" height="200" loading="lazy" src="image/KaKaKorp-t_5.gif" width="300" />
         </a>
       </div>
       <button aria-label="toggle navigation" class="nav-toggle">Menu</button>
       <script>
-        document
-          .querySelector(".nav-toggle")
-          .addEventListener("click", function () {
-            document.querySelector(".header-nav").classList.toggle("active");
-          });
+        document.querySelector(".nav-toggle").addEventListener("click", function () {
+          document.querySelector(".header-nav").classList.toggle("active");
+          document.querySelector("header").classList.toggle("active-header");
+          document.querySelector(".nav-toggle").classList.toggle("active-nav-toggle");
+        });
       </script>
       <nav class="header-nav">
         <ul class="center">
           <li>
-            <button>
-              <a class="btn2" href="index.html"
-                ><span class="spn2">ACCUEIL</span></a
-              >
-            </button>
+            <a class="btn2" href="index.html"><span class="spn2">ACCUEIL</span></a>
           </li>
           <li>
-            <button>
-              <a
-                class="btn2"
-                href="https://discord.gg/bCvuRqeyrV"
-                target="_blank"
-                ><span class="spn2">DISCORD</span></a
-              >
-            </button>
+            <a class="btn2" href="https://discord.gg/bCvuRqeyrV" target="_blank"><span class="spn2">DISCORD</span></a>
           </li>
           <li>
-            <button>
-              <a class="btn2" href="Contact.html"
-                ><span class="spn2">CONTACT</span></a
-              >
-            </button>
+            <a class="btn2" href="Contact.html"><span class="spn2">CONTACT</span></a>
           </li>
           <li>
-            <button>
-              <a class="btn2" href="Formulaire.html"
-                ><span class="spn2">Formulaire</span></a
-              >
-            </button>
+            <a class="btn2" href="Formulaire.html"><span class="spn2">Formulaire</span></a>
           </li>
         </ul>
       </nav>
