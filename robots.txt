@@ -1,4 +1,9 @@
 User-agent: *
-Disallow: 
-Disallow: /cgi-bin/
-Sitemap: https://www.kakakorp.site/sitemap.xml
+Allow: /
+Disallow: /includes/
+Disallow: /php/
+Disallow: /logs/
+Disallow: /assets/css/components/
+Disallow: /assets/js/components/
+
+Sitemap: https://kakakorp.site/sitemap.xml

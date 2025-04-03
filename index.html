@@ -4,13 +4,14 @@
   <head>
     <title>KAKAKORP Esports. Rejoignez dès maintenant l'équipe !</title>
     <link
-      href="image/KaKaKorp-transparent.ico"
+      href="assets/images/KaKaKorp-transparent.ico"
       rel="shortcut icon"
       type="image/x-icon"
     />
-    <link href="image/KaKaKorp-transparent.ico" rel="icon" />
+    <link href="assets/images/KaKaKorp-transparent.ico" rel="icon" />
     <meta charset="utf-8" />
-    <link href="combined_style.css" rel="stylesheet" />
+    <link href="assets/css/combined_style.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
     <meta
       content="KAKAKORP Esports, une équipe eSport dynamique et talentueuse, fondée en 2023, se distingue par son sens de l'humour unique et ses compétences exceptionnelles dans des jeux comme Valorant et Counter Strike."
       name="description"
@@ -25,7 +26,7 @@
     />
     <meta content="website" property="og:type" />
     <meta content="https://kakakorp.site" property="og:url" />
-    <meta content="image/KaKaKorp-transparent.png" property="og:image" />
+    <meta content="assets/images/KaKaKorp-transparent.png" property="og:image" />
     <meta
       content="Découvrez KAKAKORP Esports, une équipe eSport fondée en 2023, connue pour son talent exceptionnel et son esprit d'équipe unique dans des jeux compétitifs comme Valorant et Counter Strike."
       property="og:description"
@@ -38,6 +39,7 @@
       content="KAKAKORP Esports - Équipe eSport Dynamique et Talentueuse"
       name="twitter:title"
     />
+
     <meta content="@KAKAKORP" name="twitter:site" />
     <meta
       content="Découvrez KAKAKORP Esports, une équipe eSport fondée en 2023, connue pour son talent exceptionnel et son esprit d'équipe unique dans des jeux compétitifs comme Valorant et Counter Strike."
@@ -61,30 +63,55 @@
     <header>
       <div class="header-logo">
         <a href="index.html">
-          <img alt="Logo de KAKAKORP Esports" height="200" loading="lazy" src="image/KaKaKorp-t_5.gif" width="300" />
+          <img
+            alt="Logo de KAKAKORP Esports"
+            height="200"
+            loading="lazy"
+            src="assets/images/KaKaKorp-t_5.gif"
+            width="300"
+          />
         </a>
       </div>
       <button aria-label="toggle navigation" class="nav-toggle">Menu</button>
       <script>
-        document.querySelector(".nav-toggle").addEventListener("click", function () {
-          document.querySelector(".header-nav").classList.toggle("active");
-          document.querySelector("header").classList.toggle("active-header");
-          document.querySelector(".nav-toggle").classList.toggle("active-nav-toggle");
-        });
+        document
+          .querySelector(".nav-toggle")
+          .addEventListener("click", function () {
+            document.querySelector(".header-nav").classList.toggle("active");
+          });
       </script>
       <nav class="header-nav">
         <ul class="center">
           <li>
-            <a class="btn2" href="index.html"><span class="spn2">ACCUEIL</span></a>
+            <button>
+              <a class="btn2" href="index.html"
+                ><span class="spn2">ACCUEIL</span></a
+              >
+            </button>
           </li>
           <li>
-            <a class="btn2" href="https://discord.gg/bCvuRqeyrV" target="_blank"><span class="spn2">DISCORD</span></a>
+            <button>
+              <a
+                class="btn2"
+                href="https://discord.gg/bCvuRqeyrV"
+                target="_blank"
+                ><span class="spn2">DISCORD</span></a
+              >
+            </button>
           </li>
           <li>
-            <a class="btn2" href="Contact.html"><span class="spn2">CONTACT</span></a>
+            <button>
+              <a class="btn2" href="pages/Contact.html"
+                ><span class="spn2">CONTACT</span></a
+              >
+            </button>
           </li>
           <li>
-            <a class="btn2" href="Formulaire.html"><span class="spn2">Formulaire</span></a>
+            <button>
+              <a class="btn2" href="pages/Formulaire.html"
+                ><span class="spn2">Formulaire</span></a
+              >
+            </button>
           </li>
         </ul>
       </nav>
@@ -344,9 +371,110 @@
         </section>
       </div>
     </main>
-    <footer>
-      <a href="mailto:contact@kakakorp.site">Contact : contact@kakakorp.site</a>
-      <p>KAKAKORP ® - 2023</p>
-    </footer>
+    <div class="footer u-flex u-flex--bottom">
+      <div class="footer__top u-flex u-flex--center">
+        <a href="https://kakakorp.site" class="footer__logo">
+          <img
+            src="/image/KaKaKorp-t_5.gif"
+            class="perfmatters-lazy entered pmloaded"
+            data-src="https://tinywins.com/wp-content/themes/tinywins-2023/assets/images/logo-light.svg"
+            data-ll-status="loaded"
+          /><noscript
+            ><img
+              src="https://tinywins.com/wp-content/themes/tinywins-2023/assets/images/logo-light.svg"
+          /></noscript>
+        </a>
+        <ul class="u-flex">
+          <li>
+            <a href="https://tinywins.com/work" class="button button--footer"
+              >Accueil</a
+            >
+          </li>
+          <!-- <li>
+                    <a href="https://tinywins.com/services" class="button button--footer">Services</a>
+                </li> -->
+          <li>
+            <a href="https://tinywins.com/about" class="button button--footer"
+              >discord</a
+            >
+          </li>
+          <li>
+            <a href="https://tinywins.com/news" class="button button--footer"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a href="https://tinywins.com/careers" class="button button--footer"
+              >formulaire</a
+            >
+          </li>
+
+          <!-- <li>
+                    <a href="mailto:hello@tinywins.com" class="button button--footer">Get in Touch</a>
+                </li>
+                <li> -->
+        </ul>
+        <ul class="footer__sns u-flex">
+          <li>
+            <a
+              href="https://twitter.com/kakakorp"
+              target="_blank"
+              class="u-flex u-flex--center"
+            >
+              <i></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.tiktok.com/@neutronbzh"
+              target="_blank"
+              class="u-flex u-flex--center"
+            >
+              <i></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__middle">
+        <p class="section-description">
+          Vous voulez <span>rejoindre</span> l'équipe
+        </p>
+        <div
+          class="footer__arrow is-shown"
+          id="js-footer-arrow"
+          style="opacity: 1"
+        >
+          <img
+            src="https://tinywins.com/wp-content/themes/tinywins-2023/assets/images/footer-arrow.png"
+            class="perfmatters-lazy entered pmloaded"
+            data-src="https://tinywins.com/wp-content/themes/tinywins-2023/assets/images/footer-arrow.png"
+            data-ll-status="loaded"
+          /><noscript
+            ><img
+              src="https://tinywins.com/wp-content/themes/tinywins-2023/assets/images/footer-arrow.png"
+          /></noscript>
+        </div>
+        <p class="section-description js-footer-content" style="opacity: 1">
+          Remplissez le formulaire &amp; rejoignez le discord
+        </p>
+        <a
+          href="mailto:contact@kakakorp.site"
+          class="button button--footer js-footer-content"
+          style="opacity: 1"
+          >Contacter nous</a
+        >
+      </div>
+      <div
+        class="footer__bottom u-flex u-flex--center js-footer-content"
+        style="opacity: 1"
+      >
+        <div class="lhs">
+          <small>TM &amp; ©2024 KAKAKORP</small>
+        </div>
+        <div class="rhs">
+          <small>tout droit resevé</small>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

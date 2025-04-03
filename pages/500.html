@@ -1,0 +1,66 @@
+<?php
+$pageTitle = "Erreur serveur - KAKAKORP Esports";
+$metaDescription = "Une erreur interne du serveur s'est produite.";
+include '../includes/header.php';
+?>
+
+<div class="error-container">
+    <h1>500</h1>
+    <h2>Erreur serveur</h2>
+    <p>Désolé, une erreur interne du serveur s'est produite. Notre équipe technique a été notifiée.</p>
+    <a href="/" class="btn2">Retour à l'accueil</a>
+</div>
+
+<style>
+.error-container {
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-container h1 {
+    font-size: 120px;
+    margin: 0;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.error-container h2 {
+    font-size: 36px;
+    margin: 20px 0;
+    color: var(--text-color);
+}
+
+.error-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.error-container .btn2 {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .error-container h1 {
+        font-size: 80px;
+    }
+
+    .error-container h2 {
+        font-size: 24px;
+    }
+
+    .error-container p {
+        font-size: 16px;
+    }
+}
+</style>
+
+<?php include '../includes/footer.php'; ?> 

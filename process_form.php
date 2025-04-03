@@ -5,16 +5,17 @@ $email = $_POST['email'];
 $pseudo = $_POST['pseudo'];
 $jeu = $_POST['jeu'];
 $rang = $_POST['rang'];
+$motivation = $_POST['motivation'];
 
 // Vérification des erreurs
 if (empty($email)) {
-  die("<script>alert('L\'adresse e-mail est obligatoire.'); window.history.back();</script>");
+  die("L'adresse e-mail est obligatoire.");
 }
 if (empty($pseudo)) {
-  die("<script>alert('Le pseudo est obligatoire.'); window.history.back();</script>");
+  die("Le pseudo est obligatoire.");
 }
 if (empty($jeu)) {
-  die("<script>alert('Le jeu est obligatoire.'); window.history.back();</script>");
+  die("Le jeu est obligatoire.");
 }
 
 // Connexion à la base de données
@@ -24,45 +25,62 @@ try {
   die($e->getMessage());
 }
 
-// Vérification si l'email est déjà utilisé
-$sql = "SELECT * FROM candidatures WHERE email = :email";
-$stmt = $db->prepare($sql);
-$stmt->bindParam(':email', $email);
-$stmt->execute();
+// Récupération de la photo
+if (isset($_FILES['photo'])) {
+  $temp_file = $_FILES['photo']['tmp_name'];
+  $filename = $_FILES['photo']['name'];
 
-if ($stmt->rowCount() > 0) {
-  die("<script>alert('Cet e-mail est déjà utilisé pour une inscription.'); window.history.back();</script>");
+  $target_dir = 'uploads/';
+  if (!file_exists($target_dir)) {
+    mkdir($target_dir, 0777, true);
+  }
+
+  $target_file = $target_dir . basename($filename);
+  if (move_uploaded_file($temp_file, $target_file)) {
+    $photo = $filename;
+  } else {
+    echo "Erreur lors du téléchargement de la photo.";
+  }
+} else {
+  $photo = '';
 }
 
 // Insertion des données
-$sql = "INSERT INTO candidatures (email, pseudo, jeu, rang) VALUES (:email, :pseudo, :jeu, :rang);";
+$sql = "INSERT INTO candidatures (email, pseudo, jeu, rang, photo) VALUES (:email, :pseudo, :jeu, :rang, :photo);";
 $stmt = $db->prepare($sql);
 $stmt->bindParam(':email', $email);
 $stmt->bindParam(':pseudo', $pseudo);
 $stmt->bindParam(':jeu', $jeu);
 $stmt->bindParam(':rang', $rang);
+$stmt->bindParam(':photo', $photo);
+$stmt->bindParam(':motivation', $motivation);
 
 $stmt->execute();
 
 // Validation des données
 if ($stmt->rowCount() != 1) {
-  die("<script>alert('Une erreur s\'est produite lors de l\'insertion des données.'); window.history.back();</script>");
+  die("Une erreur s'est produite lors de l'insertion des données.");
 }
 
-// Envoi de l'email de confirmation
-$to = $email;
-$subject = "Confirmation d'inscription";
-$message = "Bonjour " . $pseudo . ",\n\nMerci pour votre inscription. Votre compte a été créé avec succès.\n\nCordialement,\nL'équipe";
-$headers = "From: no-reply@votre-domaine.com";
+// Envoi de l'email
+$to = 'contact@kakakorp.site';
+$subject = 'Nouvelle candidature';
+$message = "Une nouvelle candidature a été soumise:\n\n";
+$message .= "Email: $email\n";
+$message .= "Pseudo: $pseudo\n";
+$message .= "Jeu: $jeu\n";
+$message .= "Rang: $rang\n";
+$message .= "motivation: $motivation\n";
 
-// Vérifiez si l'email a été envoyé avec succès
-if(mail($to, $subject, $message, $headers)) {
-    echo "<script>alert('Un email de confirmation a été envoyé à " . $to . "'); window.location.href='confirmation.html';</script>";
-} else {
-    echo "<script>alert('L\'envoi de l\'email de confirmation a échoué.'); window.history.back();</script>";
-}
+$headers = "From: noreply@kakakorp.site\r\n";
+$headers .= "Reply-To: $email\r\n";
+
+mail($to, $subject, $message, $headers);
+
+// Redirection vers la page de confirmation
+header("Location: confirmation.html");
+exit();
 
 // Fermeture de la connexion à la base de données
 $db = null;
-
 ?>

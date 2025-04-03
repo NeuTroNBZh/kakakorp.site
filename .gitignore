@@ -1,2 +1,43 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
 
-image/SteelSeriesGG54.0.0Setup.exe
+# Fichiers d'environnement
+.env
+.env.local
+.env.*.local
+
+# Dossiers de dépendances
+node_modules/
+vendor/
+
+# Fichiers de build
+dist/
+build/
+
+# Fichiers de cache
+.cache/
+*.cache
+
+# Fichiers de logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers d'IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Fichiers temporaires
+*.tmp
+*.temp
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+
+# Fichiers de configuration local
+config.local.php 

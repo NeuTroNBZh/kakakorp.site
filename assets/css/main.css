@@ -1,0 +1,85 @@
+/* Import des composants */
+@import url('components/cards.css');
+@import url('components/navigation.css');
+@import url('components/forms.css');
+@import url('components/footer.css');
+
+/* Styles globaux */
+:root {
+    --primary-color: #ff6b6b;
+    --secondary-color: #333;
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --accent-color: #ff8e8e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin: 20px 0;
+    text-align: center;
+}
+
+section {
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.fond {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(51, 51, 51, 0.9) 100%);
+    padding: 40px;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+/* Styles responsifs */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    .fond {
+        padding: 20px;
+    }
+
+    section {
+        margin: 20px 0;
+        padding: 15px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+} 
